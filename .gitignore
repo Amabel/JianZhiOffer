@@ -3,7 +3,6 @@
 
 # exexutable
 *.exe
-*.java
 
 # Eclipse
 .classpath
