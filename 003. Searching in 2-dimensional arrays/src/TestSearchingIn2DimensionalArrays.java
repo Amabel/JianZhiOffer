@@ -33,6 +33,8 @@ public class TestSearchingIn2DimensionalArrays {
 		assertFalse(SearchingIn2DimensionalArrays.find(SearchingIn2DimensionalArrays.array, -1));
 		assertFalse(SearchingIn2DimensionalArrays.find(SearchingIn2DimensionalArrays.array, 2147483647));
 		assertFalse(SearchingIn2DimensionalArrays.find(SearchingIn2DimensionalArrays.array, -100000000));
+		assertFalse(SearchingIn2DimensionalArrays.find(SearchingIn2DimensionalArrays.array, 3));
+		assertFalse(SearchingIn2DimensionalArrays.find(SearchingIn2DimensionalArrays.array, 5));
 	}
 
 }
