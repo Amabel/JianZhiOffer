@@ -1,8 +1,15 @@
 # Mac OS
 .DS_Store
 
-# exe
+# exexutable
 *.exe
+*.java
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
 
 # Java
 *.class
