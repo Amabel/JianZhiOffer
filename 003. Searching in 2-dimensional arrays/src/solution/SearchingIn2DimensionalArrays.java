@@ -1,3 +1,4 @@
+package solution;
 public class SearchingIn2DimensionalArrays {
 	
 	public static int[][] array = {

@@ -1,3 +1,4 @@
+package solution;
 /**
  * @author  Weibin Luo
  * @version Created on 2017/06/02 21:05:03
@@ -6,13 +7,19 @@ public class ReplaceTheSpace {
 
 	public static void main(String[] args) {
 
-		char[] string = {'w', 'e', ' ', 'a', 'r', 'e', ' ', 'h', 'a', 'p', 'p', 'y', '\0'};
+//		char[] string = {'w', 'e', ' ', 'a', 'r', 'e', ' ', 'h', 'a', 'p', 'p', 'y', '\0'};
+		String string1 = "we are happy";
+		char[] string  = string1.toCharArray();
 		System.out.println(replace(string));
 
 	}
 
 	// replace " " with "%20" (20 is the ASCII of character space)
 	public static char[] replace(char[] string) {
+
+		if (string == null) {
+			throw new IllegalArgumentException("string cannot be null");
+		}
 
 		int length = string.length;
 		// count the number of spaces
@@ -44,8 +51,6 @@ public class ReplaceTheSpace {
 			i --;
 			j --;
 		}
-
-
 		return newArray;
 	}
 
