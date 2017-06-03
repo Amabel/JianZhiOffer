@@ -38,8 +38,12 @@ public class TesReplaceTheSpace {
 		String res5 = "\0";
 		assertArrayEquals(res5.toCharArray(), ReplaceTheSpace.replace(str5.toCharArray()));
 		
-		char[] str6 = null;
-		ReplaceTheSpace.replace(str6);
+		String str6 = " ";
+		String res6 = "%20\0";
+		assertArrayEquals(res6.toCharArray(), ReplaceTheSpace.replace(str6.toCharArray()));
+		
+		char[] str7 = null;
+		ReplaceTheSpace.replace(str7);
 		
 	}
 
