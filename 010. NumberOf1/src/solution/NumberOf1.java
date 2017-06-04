@@ -30,11 +30,11 @@ public class NumberOf1 {
 		return count;
 	}
 
-	// use variable i and shift its 1 instead of changing n's value
+	// use variable i and left shift its 1 instead of changing n's value
 	public static int countNumberOfOne2(int n) {
 		int count = 0;
 		int i = 1;
-		// the '1' in i must be shift for 64 times (in x64) until it becomes 0
+		// the '1' in i must be left shifted for 64 times (in x64) until it becomes 0
 		while (i != 0) {
 			if ((i & n) != 0) {
 				count ++;
