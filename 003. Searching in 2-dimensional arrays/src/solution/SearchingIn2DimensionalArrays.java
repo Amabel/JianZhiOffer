@@ -1,6 +1,6 @@
 package solution;
 public class SearchingIn2DimensionalArrays {
-	
+
 	public static int[][] array = {
             {1, 2, 8, 9},
             {2, 4, 9, 12},
@@ -8,7 +8,7 @@ public class SearchingIn2DimensionalArrays {
             {6, 8, 11, 15}
 	};
 //	public static int[][] array = null;
-	
+
     public static void main(String[] args) {
         int target = 2147483647;
         boolean isFound = find(array, target);
@@ -30,15 +30,15 @@ public class SearchingIn2DimensionalArrays {
     	if (rows == 0 || cols == 0) {
     		throw new IllegalArgumentException("array is empty!");
     	}
-    	
+
     	// start from top of the right (or left of the bottom)
     	int i = 0;
     	int j = cols - 1;
     	boolean isFound = false;
     	do {
-    		int n = array[i][j];
+            int n = array[i][j];
     		if (target == n) {
-    			isFound = true;
+                isFound = true;
     			break;
     		} else if (target > n){
     			i ++;
