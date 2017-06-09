@@ -37,7 +37,7 @@ public class SearchingIn2DimensionalArrays {
     	boolean isFound = false;
     	do {
             int n = array[i][j];
-    		if (target == n) {
+            if (target == n) {
                 isFound = true;
     			break;
     		} else if (target > n){
