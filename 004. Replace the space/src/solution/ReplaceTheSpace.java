@@ -5,53 +5,53 @@ package solution;
  */
 public class ReplaceTheSpace {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-//		char[] string = {'w', 'e', ' ', 'a', 'r', 'e', ' ', 'h', 'a', 'p', 'p', 'y', '\0'};
-		String string1 = "we are happy";
-		char[] string  = string1.toCharArray();
-		System.out.println(replace(string));
+//        char[] string = {'w', 'e', ' ', 'a', 'r', 'e', ' ', 'h', 'a', 'p', 'p', 'y', '\0'};
+        String string1 = "we are happy";
+        char[] string  = string1.toCharArray();
+        System.out.println(replace(string));
 
-	}
+    }
 
-	// replace " " with "%20" (20 is the ASCII of character space)
-	public static char[] replace(char[] string) {
+    // replace " " with "%20" (20 is the ASCII of character space)
+    public static char[] replace(char[] string) {
 
-		if (string == null) {
-			throw new IllegalArgumentException("string cannot be null");
-		}
+        if (string == null) {
+            throw new IllegalArgumentException("string cannot be null");
+        }
 
-		int length = string.length;
-		// count the number of spaces
-		int numSpace = 0;
-		for (int i = 0; i<length; i++) {
-			if (string[i] == ' ') {
-				numSpace ++;
-			}
-		}
+        int length = string.length;
+        // count the number of spaces
+        int numSpace = 0;
+        for (int i = 0; i<length; i++) {
+            if (string[i] == ' ') {
+                numSpace ++;
+            }
+        }
 
-		// calculate the length of new array
-		int newLength = length + 2 * numSpace + 1;
+        // calculate the length of new array
+        int newLength = length + 2 * numSpace + 1;
 
-		// create a new char array;
-		char[] newArray = new char[newLength];
+        // create a new char array;
+        char[] newArray = new char[newLength];
 
-		// i for string, j for newArray
-		int i = length - 1;
-		int j = newLength - 1;
-		newArray[j--] = '\0';
-		while (i >= 0 && j >=0) {
-			if (string[i] == ' ') {
-				newArray[j--] = '0';
-				newArray[j--] = '2';
-				newArray[j] = '%';
-			} else {
-				newArray[j] = string[i];
-			}
-			i --;
-			j --;
-		}
-		return newArray;
-	}
+        // i for string, j for newArray
+        int i = length - 1;
+        int j = newLength - 1;
+        newArray[j--] = '\0';
+        while (i >= 0 && j >=0) {
+            if (string[i] == ' ') {
+                newArray[j--] = '0';
+                newArray[j--] = '2';
+                newArray[j] = '%';
+            } else {
+                newArray[j] = string[i];
+            }
+            i --;
+            j --;
+        }
+        return newArray;
+    }
 
 }
